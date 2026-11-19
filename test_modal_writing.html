@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/glassmorphism.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="min-height: 100vh; display:flex; align-items:center; justify-content:center;">
+  <div class="modal-backdrop active" style="opacity: 1; pointer-events: auto; position: static; background: transparent;">
+    <div class="glass-modal-card" style="transform: none;">
+      <button class="modal-close-btn">&times;</button>
+      <svg class="modal-header-icon" viewBox="0 0 100 100" style="width:72px; height:72px;">
+        <defs>
+          <linearGradient id="m-tile-face" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#b197ff"/><stop offset="45%" stop-color="#8f6cf8"/><stop offset="100%" stop-color="#7048f5"/>
+          </linearGradient>
+          <linearGradient id="m-tile-side-l" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#6741dc"/><stop offset="100%" stop-color="#4924b8"/>
+          </linearGradient>
+          <linearGradient id="m-tile-side-r" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#552ec7"/><stop offset="100%" stop-color="#3b17a1"/>
+          </linearGradient>
+        </defs>
+        <path d="M 16 62 L 50 82 L 84 62 L 50 45 Z" fill="#4c3d82" opacity="0.25"/>
+        <path d="M 14 50 L 50 71 L 50 80 L 14 59 Z" fill="url(#m-tile-side-l)"/>
+        <path d="M 50 71 L 86 50 L 86 59 L 50 80 Z" fill="url(#m-tile-side-r)"/>
+        <path d="M 50 22 C 53 20 57 20 60 22 L 84 39 C 87 41 87 45 84 48 L 60 65 C 57 67 53 67 50 65 L 16 48 C 13 45 13 41 16 39 Z" fill="url(#m-tile-face)"/>
+        <path d="M 18 40 L 50 23 L 82 40" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" fill="none" opacity="0.95"/>
+        <text x="32" y="52" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="28" font-weight="900" fill="#361794" opacity="0.5">A</text>
+        <text x="31" y="50" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="28" font-weight="900" fill="#ffffff">A</text>
+        <text x="56" y="52" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="22" font-weight="900" fill="#361794" opacity="0.5">a</text>
+        <text x="55" y="50" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="22" font-weight="900" fill="#ffffff">a</text>
+        <polygon points="76,19 77.5,22.5 81,24 77.5,25.5 76,29 74.5,25.5 71,24 74.5,22.5" fill="#ffffff"/>
+        <polygon points="84,27 85,29.5 88,31 85,32.5 84,35 83,32.5 80,31 83,29.5" fill="#fbbf24"/>
+      </svg>
+      <span class="glass-pill purple-badge badge-skill-writing" style="display:table; margin:0 auto 8px;">Writing Activity</span>
+      <h2 class="modal-title">Vocabulary & Writing Task</h2>
+      <p class="modal-desc">Write 2–3 sentences incorporating at least one suggested vocabulary word.</p>
+      <div class="vocab-chips">
+        <span class="vocab-chip">+ perseverance</span>
+        <span class="vocab-chip">+ innovative</span>
+        <span class="vocab-chip">+ sustainable</span>
+      </div>
+      <textarea class="writing-textarea" placeholder="Start typing your sentences here..."></textarea>
+      <div class="word-count-badge">0 words • Min 10 words</div>
+      <button class="glass-action-btn">Submit Writing Response</button>
+    </div>
+  </div>
+</body>
+</html>

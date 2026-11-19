@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/glassmorphism.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { padding: 20px; }
+    .test-box { width: 420px; margin: 0 auto; }
+  </style>
+</head>
+<body>
+  <div class="test-box">
+    <h2 style="margin-bottom: 12px; font-size:1.1rem; color:#1e1b4b;">All 4 Activity Types: Reading, Listening, Writing, Speaking</h2>
+    <div class="cards-carousel-container grid-view-mode">
+      
+      <!-- Card 1: Reading -->
+      <article class="glass-carousel-card" style="min-width:0; flex:none;">
+        <div class="card-top-row">
+          <span class="glass-pill purple-badge badge-skill-reading">Skill</span>
+          <svg class="card-top-icon activity-card-icon" viewBox="0 0 100 100">
+            <defs>
+              <linearGradient id="g-book-spine" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ffe685"/><stop offset="50%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#b45309"/>
+              </linearGradient>
+              <linearGradient id="g-page-l" x1="0%" y1="0%" x2="100%" y2="30%">
+                <stop offset="0%" stop-color="#ffffff"/><stop offset="70%" stop-color="#f1f5f9"/><stop offset="100%" stop-color="#cbd5e1"/>
+              </linearGradient>
+              <linearGradient id="g-page-r" x1="100%" y1="0%" x2="0%" y2="30%">
+                <stop offset="0%" stop-color="#ffffff"/><stop offset="70%" stop-color="#f1f5f9"/><stop offset="100%" stop-color="#cbd5e1"/>
+              </linearGradient>
+              <linearGradient id="g-cover" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#7c5cfa"/><stop offset="100%" stop-color="#5534d4"/>
+              </linearGradient>
+            </defs>
+            <ellipse cx="50" cy="82" rx="38" ry="9" fill="#4c3d82" opacity="0.22"/>
+            <path d="M 12 64 C 26 67 42 66 50 71 C 58 66 74 67 88 64 L 86 68 C 72 71 58 70 50 75 C 42 70 28 71 14 68 Z" fill="url(#g-cover)"/>
+            <path d="M 48 69 L 46 80 L 50 83 L 54 80 L 52 69 Z" fill="url(#g-book-spine)"/>
+            <path d="M 14 36 C 28 30 40 37 49 42 L 49 70 C 40 65 28 61 14 65 Z" fill="url(#g-page-l)"/>
+            <path d="M 14 65 C 28 61 40 65 49 70 L 49 72 C 40 67 28 63 14 67 Z" fill="#94a3b8"/>
+            <path d="M 20 44 C 29 40 37 44 43 47" stroke="#cbd5e1" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <path d="M 20 50 C 29 46 37 50 43 53" stroke="#cbd5e1" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <path d="M 20 56 C 29 52 37 56 43 59" stroke="#cbd5e1" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <path d="M 86 36 C 72 30 60 37 51 42 L 51 70 C 60 65 72 61 86 65 Z" fill="url(#g-page-r)"/>
+            <path d="M 86 65 C 72 61 60 65 51 70 L 51 72 C 60 67 72 63 86 67 Z" fill="#94a3b8"/>
+            <path d="M 80 44 C 71 40 63 44 57 47" stroke="#cbd5e1" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <path d="M 80 50 C 71 46 63 50 57 53" stroke="#cbd5e1" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <path d="M 80 56 C 71 52 63 56 57 59" stroke="#cbd5e1" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <path d="M 48 42 L 50 44 L 52 42 L 52 70 L 50 72 L 48 70 Z" fill="#64748b" opacity="0.4"/>
+            <path d="M 48.5 43 L 48.5 76 L 50 78 L 51.5 76 L 51.5 43 Z" fill="url(#g-book-spine)"/>
+            <polygon points="48,76 50,73 52,76 52,79 50,76.5 48,79" fill="#f59e0b"/>
+            <polygon points="80,26 82,31 87,33 82,35 80,40 78,35 73,33 78,31" fill="#fbbf24"/>
+          </svg>
+        </div>
+        <div class="card-main-info">
+          <h3 class="card-title">Task 1</h3>
+          <p class="card-subtitle">Reading • 5 questions</p>
+        </div>
+        <div class="card-bottom-progress">
+          <div class="glass-progress-wrap">
+            <div class="glass-progress-track">
+              <div class="glass-progress-fill" style="width: 20%;"></div>
+            </div>
+            <span class="glass-progress-percent">20%</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2: Listening -->
+      <article class="glass-carousel-card" style="min-width:0; flex:none;">
+        <div class="card-top-row">
+          <span class="glass-pill purple-badge badge-skill-listening">Skill</span>
+          <svg class="card-top-icon activity-card-icon" viewBox="0 0 100 100">
+            <defs>
+              <linearGradient id="g-hp-band" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff"/><stop offset="40%" stop-color="#e2e8f0"/><stop offset="100%" stop-color="#94a3b8"/>
+              </linearGradient>
+              <linearGradient id="g-hp-cushion" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#8b5cf6"/><stop offset="50%" stop-color="#6d28d9"/><stop offset="100%" stop-color="#4c1d95"/>
+              </linearGradient>
+              <linearGradient id="g-wave-gold" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#fde047"/><stop offset="60%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#d97706"/>
+              </linearGradient>
+            </defs>
+            <ellipse cx="50" cy="84" rx="36" ry="8" fill="#4c3d82" opacity="0.22"/>
+            <path d="M 22 55 C 20 25 34 14 50 14 C 66 14 80 25 78 55" stroke="url(#g-hp-band)" stroke-width="8" stroke-linecap="round" fill="none"/>
+            <path d="M 25 50 C 24 28 35 17 50 17 C 65 17 76 28 75 50" stroke="#ffffff" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.9"/>
+            <rect x="34" y="52" width="5" height="15" rx="2.5" fill="#a78bfa"/>
+            <rect x="42" y="42" width="5.5" height="26" rx="2.75" fill="url(#g-wave-gold)"/>
+            <rect x="50" y="34" width="6" height="34" rx="3" fill="url(#g-wave-gold)"/>
+            <rect x="58" y="44" width="5.5" height="24" rx="2.75" fill="url(#g-wave-gold)"/>
+            <rect x="66" y="54" width="5" height="13" rx="2.5" fill="#a78bfa"/>
+            <g transform="translate(13, 44) rotate(-6)">
+              <rect x="0" y="0" width="14" height="29" rx="7" fill="url(#g-hp-band)"/>
+              <rect x="2" y="2" width="4" height="25" rx="2" fill="#ffffff" opacity="0.8"/>
+              <rect x="9" y="3" width="7.5" height="23" rx="3.75" fill="url(#g-hp-cushion)"/>
+            </g>
+            <g transform="translate(73, 43) rotate(6)">
+              <rect x="-2.5" y="3" width="7.5" height="23" rx="3.75" fill="url(#g-hp-cushion)"/>
+              <rect x="0" y="0" width="14" height="29" rx="7" fill="url(#g-hp-band)"/>
+              <rect x="8" y="2" width="4" height="25" rx="2" fill="#ffffff" opacity="0.8"/>
+            </g>
+            <polygon points="26,20 27.5,23.5 31,25 27.5,26.5 26,30 24.5,26.5 21,25 24.5,23.5" fill="#ffffff"/>
+          </svg>
+        </div>
+        <div class="card-main-info">
+          <h3 class="card-title">Task 2</h3>
+          <p class="card-subtitle">Listening • 10 questions</p>
+        </div>
+        <div class="card-bottom-progress">
+          <div class="glass-progress-wrap">
+            <div class="glass-progress-track">
+              <div class="glass-progress-fill" style="width: 0%;"></div>
+            </div>
+            <span class="glass-progress-percent">0%</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3: Writing (Aa Tile from Picture 1) -->
+      <article class="glass-carousel-card" style="min-width:0; flex:none;">
+        <div class="card-top-row">
+          <span class="glass-pill purple-badge badge-skill-writing">Skill</span>
+          <svg class="card-top-icon activity-card-icon" viewBox="0 0 100 100">
+            <defs>
+              <linearGradient id="g-tile-face" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#b197ff"/><stop offset="45%" stop-color="#8f6cf8"/><stop offset="100%" stop-color="#7048f5"/>
+              </linearGradient>
+              <linearGradient id="g-tile-side-l" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#6741dc"/><stop offset="100%" stop-color="#4924b8"/>
+              </linearGradient>
+              <linearGradient id="g-tile-side-r" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#552ec7"/><stop offset="100%" stop-color="#3b17a1"/>
+              </linearGradient>
+            </defs>
+            <path d="M 16 62 L 50 82 L 84 62 L 50 45 Z" fill="#4c3d82" opacity="0.25"/>
+            <path d="M 14 50 L 50 71 L 50 80 L 14 59 Z" fill="url(#g-tile-side-l)"/>
+            <path d="M 50 71 L 86 50 L 86 59 L 50 80 Z" fill="url(#g-tile-side-r)"/>
+            <path d="M 50 22 C 53 20 57 20 60 22 L 84 39 C 87 41 87 45 84 48 L 60 65 C 57 67 53 67 50 65 L 16 48 C 13 45 13 41 16 39 Z" fill="url(#g-tile-face)"/>
+            <path d="M 18 40 L 50 23 L 82 40" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" fill="none" opacity="0.95"/>
+            <path d="M 50 66 L 83 48" stroke="#d5bfff" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.6"/>
+            <text x="32" y="52" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="28" font-weight="900" fill="#361794" opacity="0.5">A</text>
+            <text x="31" y="50" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="28" font-weight="900" fill="#ffffff">A</text>
+            <text x="56" y="52" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="22" font-weight="900" fill="#361794" opacity="0.5">a</text>
+            <text x="55" y="50" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="22" font-weight="900" fill="#ffffff">a</text>
+            <polygon points="76,19 77.5,22.5 81,24 77.5,25.5 76,29 74.5,25.5 71,24 74.5,22.5" fill="#ffffff"/>
+            <polygon points="84,27 85,29.5 88,31 85,32.5 84,35 83,32.5 80,31 83,29.5" fill="#fbbf24"/>
+          </svg>
+        </div>
+        <div class="card-main-info">
+          <h3 class="card-title">Task 3</h3>
+          <p class="card-subtitle">Writing • 8 questions</p>
+        </div>
+        <div class="card-bottom-progress">
+          <div class="glass-progress-wrap">
+            <div class="glass-progress-track">
+              <div class="glass-progress-fill" style="width: 0%;"></div>
+            </div>
+            <span class="glass-progress-percent">0%</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4: Speaking -->
+      <article class="glass-carousel-card" style="min-width:0; flex:none;">
+        <div class="card-top-row">
+          <span class="glass-pill purple-badge badge-skill-speaking">Skill</span>
+          <svg class="card-top-icon activity-card-icon" viewBox="0 0 100 100">
+            <defs>
+              <linearGradient id="g-mic-head" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff"/><stop offset="45%" stop-color="#cbd5e1"/><stop offset="100%" stop-color="#94a3b8"/>
+              </linearGradient>
+              <linearGradient id="g-mic-body" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#9d7eff"/><stop offset="45%" stop-color="#7c5cfa"/><stop offset="100%" stop-color="#5a38db"/>
+              </linearGradient>
+              <linearGradient id="g-mic-metal" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff"/><stop offset="50%" stop-color="#e2e8f0"/><stop offset="100%" stop-color="#94a3b8"/>
+              </linearGradient>
+            </defs>
+            <ellipse cx="44" cy="85" rx="26" ry="7" fill="#4c3d82" opacity="0.22"/>
+            <ellipse cx="42" cy="81" rx="18" ry="5.5" fill="url(#g-mic-metal)"/>
+            <ellipse cx="42" cy="79" rx="16" ry="4" fill="#f1f5f9"/>
+            <rect x="40" y="60" width="4.5" height="20" rx="2.25" fill="url(#g-mic-metal)"/>
+            <path d="M 27 45 C 27 63 57 63 57 45" stroke="url(#g-mic-metal)" stroke-width="4" stroke-linecap="round" fill="none"/>
+            <circle cx="27" cy="45" r="3" fill="#7c5cfa"/>
+            <circle cx="57" cy="45" r="3" fill="#7c5cfa"/>
+            <rect x="32" y="20" width="20" height="36" rx="10" fill="url(#g-mic-body)"/>
+            <path d="M 32 32 C 32 22 36 20 42 20 C 48 20 52 22 52 32 Z" fill="url(#g-mic-head)"/>
+            <line x1="33" y1="25" x2="51" y2="25" stroke="#94a3b8" stroke-width="1.2"/>
+            <line x1="32.5" y1="29" x2="51.5" y2="29" stroke="#94a3b8" stroke-width="1.2"/>
+            <line x1="32" y1="33" x2="52" y2="33" stroke="#ffffff" stroke-width="1.6"/>
+            <rect x="34" y="22" width="2.2" height="30" rx="1.1" fill="#ffffff" opacity="0.6"/>
+            <path d="M 64 36 C 68 40 68 46 64 50" stroke="#f59e0b" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+            <path d="M 72 31 C 78 37 78 49 72 55" stroke="#f59e0b" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+            <path d="M 80 26 C 88 34 88 52 80 60" stroke="#f59e0b" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+            <polygon points="23,19 24.5,22.5 28,24 24.5,25.5 23,29 21.5,25.5 18,24 21.5,22.5" fill="#fbbf24"/>
+          </svg>
+        </div>
+        <div class="card-main-info">
+          <h3 class="card-title">Task 4</h3>
+          <p class="card-subtitle">Speaking • 6 questions</p>
+        </div>
+        <div class="card-bottom-progress">
+          <div class="glass-progress-wrap">
+            <div class="glass-progress-track">
+              <div class="glass-progress-fill" style="width: 0%;"></div>
+            </div>
+            <span class="glass-progress-percent">0%</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</body>
+</html>

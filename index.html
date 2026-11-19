@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>MSI School - Unit 7.1 Learning Hub</title>
+  <link rel="stylesheet" href="css/glassmorphism.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Ambient Glowing Background Mesh (Picture 1 Aesthetic) -->
+  <div class="ambient-mesh">
+    <div class="ambient-glow-orb orb-lavender"></div>
+    <div class="ambient-glow-orb orb-sky"></div>
+    <div class="ambient-glow-orb orb-violet"></div>
+  </div>
+
+  <!-- Desktop Controls Bar (Optional device view switch) -->
+  <header class="desktop-controls-bar">
+    <div class="brand-badge">
+      <svg viewBox="0 0 100 100" width="22" height="22">
+        <polygon points="50,10 78,35 68,85 50,95 32,85 22,35" fill="#a78bfa"/>
+        <polygon points="50,10 78,35 50,55 22,35" fill="#e0e7ff"/>
+        <polygon points="50,55 78,35 68,85" fill="#818cf8"/>
+        <polygon points="50,55 68,85 50,95" fill="#6366f1"/>
+        <polygon points="50,55 50,95 32,85" fill="#4f46e5"/>
+        <polygon points="50,55 32,85 22,35" fill="#a5b4fc"/>
+        <polygon points="50,10 50,55 22,35" fill="#ffffff" opacity="0.8"/>
+      </svg>
+      <span>MSI School • Mobile Edition</span>
+    </div>
+    <button class="view-toggle-btn" id="toggleViewBtn" title="Toggle phone frame or full view">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="5" y="2" width="14" height="20" rx="3" ry="3"></rect>
+        <line x1="12" y1="18" x2="12.01" y2="18"></line>
+      </svg>
+      <span id="viewBtnText">Device View</span>
+    </button>
+  </header>
+
+  <!-- Mobile Viewport Container -->
+  <main class="device-wrapper">
+
+    <!-- ====================================================================
+         TOP APP HEADER (Placement from Picture 2)
+         - Left: Back Chevron button `<`
+         - Center: Title `Unit 7.1`
+         - Right: Key button & Bookmark button
+         ==================================================================== -->
+    <header class="app-header">
+      <div class="header-left">
+        <button class="glass-circle-btn" id="backNavBtn" aria-label="Go back">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <div class="header-title-wrap">
+        <h1 class="header-title">Unit 7.1</h1>
+        <span class="header-subtitle">Intermediate English</span>
+      </div>
+
+      <div class="header-right">
+        <button class="glass-circle-btn" id="keyBtn" aria-label="Keys and XP">
+          <svg class="icon-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 2l-2 2m-1.5 1.5L16 7l-1.5-1.5m-3 3L8 10l-1.5-1.5M7 11a5 5 0 1 0 7 7 5 5 0 0 0-7-7z"></path>
+          </svg>
+        </button>
+        <button class="glass-circle-btn" id="bookmarkBtn" aria-label="Bookmark unit">
+          <svg class="icon-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- ====================================================================
+         SECTION 1 (TOP): VOCABULARY SECTION (Placement from Picture 2)
+         - Banner: Mountain landscape in Picture 1 pastel aesthetic, star badge,
+           "Vocabulary", "42 words", progress capsule "0%"
+         - Carousel: Vocabulary cards with PURPLE BADGES (as explicitly instructed!)
+         ==================================================================== -->
+    <section class="content-section" id="vocabSection">
+      
+      <!-- Vocabulary Hero Banner Card -->
+      <article class="section-hero-banner glass-panel" id="vocabBannerCard">
+        <div class="banner-scenery vocab-scenery">
+          <svg viewBox="0 0 400 160" preserveAspectRatio="none" style="width:100%; height:100%;">
+            <path d="M 0 160 L 0 70 L 60 40 L 140 100 L 220 30 L 310 90 L 400 45 L 400 160 Z" fill="#586ba8" opacity="0.6"/>
+            <path d="M 0 160 L 0 100 L 90 50 L 160 110 L 260 25 L 340 85 L 400 60 L 400 160 Z" fill="#44548c" opacity="0.8"/>
+            <polygon points="260,25 242,48 255,44 260,52 268,42 278,48" fill="#e8f0fe" opacity="0.95"/>
+            <polygon points="90,50 78,65 88,62 90,68 98,60 104,66" fill="#e8f0fe" opacity="0.95"/>
+            <path d="M 0 160 L 0 125 C 80 110 160 135 240 115 C 320 95 360 120 400 110 L 400 160 Z" fill="#323f72" opacity="0.9"/>
+          </svg>
+        </div>
+        <div class="banner-glass-overlay"></div>
+
+        <div class="banner-content">
+          <div class="banner-title-group">
+            <!-- Glossy White Disc with 3D Golden Star -->
+            <svg class="banner-star-icon" viewBox="0 0 100 100">
+              <defs>
+                <linearGradient id="v-star-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#fffbeb"/>
+                  <stop offset="40%" stop-color="#fbbf24"/>
+                  <stop offset="100%" stop-color="#d97706"/>
+                </linearGradient>
+              </defs>
+              <circle cx="50" cy="50" r="44" fill="#ffffff"/>
+              <circle cx="50" cy="50" r="42" fill="none" stroke="#e0e7ff" stroke-width="2.5"/>
+              <polygon points="50,23 58,38 75,40 62,53 66,70 50,61 34,70 38,53 25,40 42,38" fill="url(#v-star-gold)"/>
+              <polygon points="50,23 58,38 75,40 62,53 66,70 50,61 50,23" fill="#d97706" opacity="0.35"/>
+            </svg>
+            <div class="banner-text">
+              <h2>Vocabulary</h2>
+              <p>42 words</p>
+            </div>
+          </div>
+          <div class="banner-chevron">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+          </div>
+        </div>
+
+        <div class="banner-progress">
+          <div class="glass-progress-wrap">
+            <div class="glass-progress-track">
+              <div class="glass-progress-fill" style="width: 28%;"></div>
+            </div>
+            <span class="glass-progress-percent">28%</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Horizontal Carousel: Vocabulary Cards with PURPLE BADGES -->
+      <div class="cards-carousel-container" id="vocabCarousel">
+        
+        <!-- Round 1 Card -->
+        <article class="glass-carousel-card" data-vocab-round="1" data-words="12" data-progress="45">
+          <div class="card-top-row">
+            <!-- Explicit requirement: Purple badges on vocabulary cards -->
+            <span class="glass-pill purple-badge">Active</span>
+            <!-- 3D Gold Ribbon Medal -->
+            <svg class="card-top-icon" viewBox="0 0 100 100">
+              <defs>
+                <linearGradient id="m-gold-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#fff5cc"/>
+                  <stop offset="30%" stop-color="#fbbf24"/>
+                  <stop offset="80%" stop-color="#d97706"/>
+                  <stop offset="100%" stop-color="#92400e"/>
+                </linearGradient>
+                <linearGradient id="m-ribbon-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#9c7eff"/>
+                  <stop offset="50%" stop-color="#7c5cfa"/>
+                  <stop offset="100%" stop-color="#5533d6"/>
+                </linearGradient>
+              </defs>
+              <path d="M 37 46 L 26 84 L 38 75 L 47 84 L 44 48 Z" fill="url(#m-ribbon-1)"/>
+              <path d="M 63 46 L 74 84 L 62 75 L 53 84 L 56 48 Z" fill="url(#m-ribbon-1)" opacity="0.9"/>
+              <circle cx="50" cy="46" r="24" fill="url(#m-gold-1)"/>
+              <circle cx="50" cy="46" r="20" fill="none" stroke="#fff4cf" stroke-width="2" opacity="0.9"/>
+              <polygon points="50,32 54,42 64,43 56,50 59,60 50,54 41,60 44,50 36,43 46,42" fill="#fff9db"/>
+              <polygon points="50,32 54,42 64,43 56,50 59,60 50,54 50,32" fill="#d97706" opacity="0.4"/>
+            </svg>
+          </div>
+          <div class="card-main-info">
+            <h3 class="card-title">Round 1</h3>
+            <p class="card-subtitle">12 words</p>
+          </div>
+          <div class="card-bottom-progress">
+            <div class="glass-progress-wrap">
+              <div class="glass-progress-track">
+                <div class="glass-progress-fill" style="width: 45%;"></div>
+              </div>
+              <span class="glass-progress-percent">45%</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Round 2 Card -->
+        <article class="glass-carousel-card" data-vocab-round="2" data-words="5" data-progress="0">
+          <div class="card-top-row">
+            <span class="glass-pill purple-badge">Active</span>
+            <svg class="card-top-icon" viewBox="0 0 100 100">
+              <defs>
+                <linearGradient id="m-gold-2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#fff5cc"/>
+                  <stop offset="30%" stop-color="#fbbf24"/>
+                  <stop offset="80%" stop-color="#d97706"/>
+                  <stop offset="100%" stop-color="#92400e"/>
+                </linearGradient>
+                <linearGradient id="m-ribbon-2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#9c7eff"/>
+                  <stop offset="50%" stop-color="#7c5cfa"/>
+                  <stop offset="100%" stop-color="#5533d6"/>
+                </linearGradient>
+              </defs>
+              <path d="M 37 46 L 26 84 L 38 75 L 47 84 L 44 48 Z" fill="url(#m-ribbon-2)"/>
+              <path d="M 63 46 L 74 84 L 62 75 L 53 84 L 56 48 Z" fill="url(#m-ribbon-2)" opacity="0.9"/>
+              <circle cx="50" cy="46" r="24" fill="url(#m-gold-2)"/>
+              <circle cx="50" cy="46" r="20" fill="none" stroke="#fff4cf" stroke-width="2" opacity="0.9"/>
+              <polygon points="50,32 54,42 64,43 56,50 59,60 50,54 41,60 44,50 36,43 46,42" fill="#fff9db"/>
+              <polygon points="50,32 54,42 64,43 56,50 59,60 50,54 50,32" fill="#d97706" opacity="0.4"/>
+            </svg>
+          </div>
+          <div class="card-main-info">
+            <h3 class="card-title">Round 2</h3>
+            <p class="card-subtitle">5 words</p>
+          </div>
+          <div class="card-bottom-progress">
+            <div class="glass-progress-wrap">
+              <div class="glass-progress-track">
+                <div class="glass-progress-fill" style="width: 0%;"></div>
+              </div>
+              <span class="glass-progress-percent">0%</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Round 3 Card -->
+        <article class="glass-carousel-card" data-vocab-round="3" data-words="8" data-progress="0">
+          <div class="card-top-row">
+            <span class="glass-pill purple-badge">Active</span>
+            <svg class="card-top-icon" viewBox="0 0 100 100">
+              <defs>
+                <linearGradient id="m-gold-3" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#fff5cc"/>
+                  <stop offset="30%" stop-color="#fbbf24"/>
+                  <stop offset="80%" stop-color="#d97706"/>
+                  <stop offset="100%" stop-color="#92400e"/>
+                </linearGradient>
+                <linearGradient id="m-ribbon-3" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#9c7eff"/>
+                  <stop offset="50%" stop-color="#7c5cfa"/>
+                  <stop offset="100%" stop-color="#5533d6"/>
+                </linearGradient>
+              </defs>
+              <path d="M 37 46 L 26 84 L 38 75 L 47 84 L 44 48 Z" fill="url(#m-ribbon-3)"/>
+              <path d="M 63 46 L 74 84 L 62 75 L 53 84 L 56 48 Z" fill="url(#m-ribbon-3)" opacity="0.9"/>
+              <circle cx="50" cy="46" r="24" fill="url(#m-gold-3)"/>
+              <circle cx="50" cy="46" r="20" fill="none" stroke="#fff4cf" stroke-width="2" opacity="0.9"/>
+              <polygon points="50,32 54,42 64,43 56,50 59,60 50,54 41,60 44,50 36,43 46,42" fill="#fff9db"/>
+              <polygon points="50,32 54,42 64,43 56,50 59,60 50,54 50,32" fill="#d97706" opacity="0.4"/>
+            </svg>
+          </div>
+          <div class="card-main-info">
+            <h3 class="card-title">Round 3</h3>
+            <p class="card-subtitle">8 words</p>
+          </div>
+          <div class="card-bottom-progress">
+            <div class="glass-progress-wrap">
+              <div class="glass-progress-track">
+                <div class="glass-progress-fill" style="width: 0%;"></div>
+              </div>
+              <span class="glass-progress-percent">0%</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Round 4 Card -->
+        <article class="glass-carousel-card" data-vocab-round="4" data-words="17" data-progress="0">
+          <div class="card-top-row">
+            <span class="glass-pill purple-badge">Active</span>
+            <svg class="card-top-icon" viewBox="0 0 100 100">
+              <defs>
+                <linearGradient id="m-gold-4" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#fff5cc"/>
+                  <stop offset="30%" stop-color="#fbbf24"/>
+                  <stop offset="80%" stop-color="#d97706"/>
+                  <stop offset="100%" stop-color="#92400e"/>
+                </linearGradient>
+                <linearGradient id="m-ribbon-4" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#9c7eff"/>
+                  <stop offset="50%" stop-color="#7c5cfa"/>
+                  <stop offset="100%" stop-color="#5533d6"/>
+                </linearGradient>
+              </defs>
+              <path d="M 37 46 L 26 84 L 38 75 L 47 84 L 44 48 Z" fill="url(#m-ribbon-4)"/>
+              <path d="M 63 46 L 74 84 L 62 75 L 53 84 L 56 48 Z" fill="url(#m-ribbon-4)" opacity="0.9"/>
+              <circle cx="50" cy="46" r="24" fill="url(#m-gold-4)"/>
+              <circle cx="50" cy="46" r="20" fill="none" stroke="#fff4cf" stroke-width="2" opacity="0.9"/>
+              <polygon points="50,32 54,42 64,43 56,50 59,60 50,54 41,60 44,50 36,43 46,42" fill="#fff9db"/>
+              <polygon points="50,32 54,42 64,43 56,50 59,60 50,54 50,32" fill="#d97706" opacity="0.4"/>
+            </svg>
+          </div>
+          <div class="card-main-info">
+            <h3 class="card-title">Round 4</h3>
+            <p class="card-subtitle">17 words</p>
+          </div>
+          <div class="card-bottom-progress">
+            <div class="glass-progress-wrap">
+              <div class="glass-progress-track">
+                <div class="glass-progress-fill" style="width: 0%;"></div>
+              </div>
+              <span class="glass-progress-percent">0%</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 2 (MIDDLE): THEORY / VIDEO LESSON (Placement from Picture 2)
+         - Left: Video preview, play button, "Not watched" status badge, "THEORY / Video lesson"
+         - Right: Docked "Test" action card with glowing circular arrow button & "0%"
+         ==================================================================== -->
+    <section class="content-section video-theory-section" id="videoSection">
+      <article class="video-theory-card" id="videoLessonTrigger">
+        
+        <!-- Video Left Side -->
+        <div class="video-preview-pane">
+          <div class="video-bg-media">
+            <svg viewBox="0 0 300 160" preserveAspectRatio="xMidYMid slice" style="width:100%; height:100%;">
+              <defs>
+                <radialGradient id="teacher-spot" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35"/>
+                  <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+                </radialGradient>
+              </defs>
+              <rect width="300" height="160" fill="url(#teacher-spot)"/>
+              <!-- Presentation whiteboard -->
+              <rect x="25" y="25" width="60" height="70" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1.5" opacity="0.7"/>
+              <line x1="35" y1="40" x2="75" y2="40" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="35" y1="52" x2="65" y2="52" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+              <line x1="35" y1="64" x2="70" y2="64" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+              <!-- Teacher silhouette (man in suit & glasses from Picture 2) -->
+              <ellipse cx="160" cy="155" rx="55" ry="45" fill="#1e293b"/>
+              <path d="M 140 120 L 160 145 L 180 120 Z" fill="#ffffff" opacity="0.9"/>
+              <polygon points="156,126 164,126 162,158 158,158" fill="#3b82f6"/>
+              <circle cx="160" cy="85" r="26" fill="#d4a373"/>
+              <path d="M 134 80 C 134 58 186 58 186 80 Z" fill="#2d2d2d"/>
+              <rect x="146" y="80" width="12" height="9" rx="2" fill="none" stroke="#222" stroke-width="1.5"/>
+              <rect x="162" y="80" width="12" height="9" rx="2" fill="none" stroke="#222" stroke-width="1.5"/>
+              <line x1="158" y1="84" x2="162" y2="84" stroke="#222" stroke-width="1.5"/>
+              <path d="M 154 98 Q 160 102 166 98" stroke="#773b18" stroke-width="1.5" fill="none"/>
+            </svg>
+          </div>
+          <div class="video-scenery-overlay"></div>
+
+          <!-- Video Badges & Play -->
+          <div class="video-status-badge">Not watched</div>
+
+          <div class="video-info-bottom">
+            <div class="video-play-btn" id="playBtnMini">
+              <svg viewBox="0 0 24 24"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg>
+            </div>
+            <div class="video-labels">
+              <span class="video-tag">Theory</span>
+              <h3 class="video-title">Video lesson</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Right Action Tab ("Test") -->
+        <div class="video-test-dock" id="testDockBtn" title="Take unit test">
+          <span class="test-dock-title">Test</span>
+          <div class="test-arrow-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+          <span class="test-dock-percent">0%</span>
+        </div>
+
+      </article>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 3 (BOTTOM): ACTIVITY CARDS (ALL 4 TYPES)
+         - Reading: Reading icon from Picture 1 (Open 3D book)
+         - Listening: Listening icon from Picture 1 (3D headphones with sound waves)
+         - Writing: Vocabulary icon from Picture 1 (3D "Aa" tile block - user instructed!)
+         - Speaking: Speaking icon from Picture 1 (3D studio mic with radiating waves)
+         ==================================================================== -->
+    <section class="content-section activities-section" id="activitiesSection">
+      
+      <!-- Activities Hero Banner Card (Picture 2 Placement) -->
+      <article class="section-hero-banner glass-panel" id="activitiesBannerCard">
+        <div class="banner-scenery activities-scenery">
+          <svg viewBox="0 0 400 160" preserveAspectRatio="none" style="width:100%; height:100%;">
+            <path d="M 0 160 L 0 60 L 70 30 L 150 90 L 250 20 L 330 80 L 400 40 L 400 160 Z" fill="#7556a3" opacity="0.6"/>
+            <path d="M 0 160 L 0 90 L 100 45 L 170 100 L 280 15 L 360 75 L 400 50 L 400 160 Z" fill="#5c3f84" opacity="0.8"/>
+            <polygon points="280,15 264,36 274,32 280,42 288,34 296,40" fill="#f8e8f8" opacity="0.95"/>
+            <polygon points="100,45 88,60 97,56 100,64 108,55 114,60" fill="#f8e8f8" opacity="0.95"/>
+            <path d="M 0 160 L 0 120 C 100 105 180 130 260 110 C 340 90 370 115 400 105 L 400 160 Z" fill="#442a66" opacity="0.9"/>
+          </svg>
+        </div>
+        <div class="banner-glass-overlay"></div>
+
+        <div class="banner-content">
+          <div class="banner-title-group">
+            <!-- Glossy White Disc with Golden Star -->
+            <svg class="banner-star-icon" viewBox="0 0 100 100">
+              <defs>
+                <linearGradient id="act-star-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#fffbeb"/>
+                  <stop offset="40%" stop-color="#fbbf24"/>
+                  <stop offset="100%" stop-color="#d97706"/>
+                </linearGradient>
+              </defs>
+              <circle cx="50" cy="50" r="44" fill="#ffffff"/>
+              <circle cx="50" cy="50" r="42" fill="none" stroke="#e0e7ff" stroke-width="2.5"/>
+              <polygon points="50,23 58,38 75,40 62,53 66,70 50,61 34,70 38,53 25,40 42,38" fill="url(#act-star-gold)"/>
+              <polygon points="50,23 58,38 75,40 62,53 66,70 50,61 50,23" fill="#d97706" opacity="0.35"/>
+            </svg>
+            <div class="banner-text">
+              <h2>Exercises</h2>
+              <p>16 tasks • 4 activities</p>
+            </div>
+          </div>
+          <div class="banner-chevron">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+          </div>
+        </div>
+
+        <div class="banner-progress">
+          <div class="glass-progress-wrap">
+            <div class="glass-progress-track">
+              <div class="glass-progress-fill" style="width: 20%;"></div>
+            </div>
+            <span class="glass-progress-percent">20%</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- View switcher between Picture 2 Carousel and 2x2 Grid -->
+      <div class="activities-view-switcher">
+        <span class="activities-view-label">Activity Cards</span>
+        <div class="view-mode-pills">
+          <button class="view-mode-pill active" id="pillModeCarousel" title="Horizontal scroll">
+            ⇄ Carousel
+          </button>
+          <button class="view-mode-pill" id="pillModeGrid" title="2x2 Grid view">
+            ⊞ Grid
+          </button>
+        </div>
+      </div>
+
+      <!-- Carousel of ALL FOUR Activity Cards -->
+      <div class="cards-carousel-container" id="activitiesCarousel">
+
+        <!-- ==============================================
+             ACTIVITY 1: READING (Icon from Picture 1)
+             ============================================== -->
+        <article class="glass-carousel-card" data-activity-type="reading">
+          <div class="card-top-row">
+            <span class="glass-pill purple-badge badge-skill-reading">Skill</span>
+            <!-- 3D Open Book from Picture 1 -->
+            <svg class="card-top-icon activity-card-icon" viewBox="0 0 100 100" title="Reading Activity">
+              <defs>
+                <linearGradient id="act-book-spine" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ffe685"/>
+                  <stop offset="50%" stop-color="#f59e0b"/>
+                  <stop offset="100%" stop-color="#b45309"/>
+                </linearGradient>
+                <linearGradient id="act-page-l" x1="0%" y1="0%" x2="100%" y2="30%">
+                  <stop offset="0%" stop-color="#ffffff"/>
+                  <stop offset="70%" stop-color="#f1f5f9"/>
+                  <stop offset="100%" stop-color="#cbd5e1"/>
+                </linearGradient>
+                <linearGradient id="act-page-r" x1="100%" y1="0%" x2="0%" y2="30%">
+                  <stop offset="0%" stop-color="#ffffff"/>
+                  <stop offset="70%" stop-color="#f1f5f9"/>
+                  <stop offset="100%" stop-color="#cbd5e1"/>
+                </linearGradient>
+                <linearGradient id="act-cover" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#7c5cfa"/>
+                  <stop offset="100%" stop-color="#5534d4"/>
+                </linearGradient>
+              </defs>
+              <ellipse cx="50" cy="82" rx="38" ry="9" fill="#4c3d82" opacity="0.22"/>
+              <path d="M 12 64 C 26 67 42 66 50 71 C 58 66 74 67 88 64 L 86 68 C 72 71 58 70 50 75 C 42 70 28 71 14 68 Z" fill="url(#act-cover)"/>
+              <path d="M 48 69 L 46 80 L 50 83 L 54 80 L 52 69 Z" fill="url(#act-book-spine)"/>
+              <path d="M 14 36 C 28 30 40 37 49 42 L 49 70 C 40 65 28 61 14 65 Z" fill="url(#act-page-l)"/>
+              <path d="M 14 65 C 28 61 40 65 49 70 L 49 72 C 40 67 28 63 14 67 Z" fill="#94a3b8"/>
+              <path d="M 20 44 C 29 40 37 44 43 47" stroke="#cbd5e1" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <path d="M 20 50 C 29 46 37 50 43 53" stroke="#cbd5e1" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <path d="M 20 56 C 29 52 37 56 43 59" stroke="#cbd5e1" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <path d="M 86 36 C 72 30 60 37 51 42 L 51 70 C 60 65 72 61 86 65 Z" fill="url(#act-page-r)"/>
+              <path d="M 86 65 C 72 61 60 65 51 70 L 51 72 C 60 67 72 63 86 67 Z" fill="#94a3b8"/>
+              <path d="M 80 44 C 71 40 63 44 57 47" stroke="#cbd5e1" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <path d="M 80 50 C 71 46 63 50 57 53" stroke="#cbd5e1" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <path d="M 80 56 C 71 52 63 56 57 59" stroke="#cbd5e1" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <path d="M 48 42 L 50 44 L 52 42 L 52 70 L 50 72 L 48 70 Z" fill="#64748b" opacity="0.4"/>
+              <path d="M 48.5 43 L 48.5 76 L 50 78 L 51.5 76 L 51.5 43 Z" fill="url(#act-book-spine)"/>
+              <polygon points="48,76 50,73 52,76 52,79 50,76.5 48,79" fill="#f59e0b"/>
+              <polygon points="80,26 82,31 87,33 82,35 80,40 78,35 73,33 78,31" fill="#fbbf24"/>
+            </svg>
+          </div>
+          <div class="card-main-info">
+            <h3 class="card-title">Task 1</h3>
+            <p class="card-subtitle">Reading • 5 questions</p>
+          </div>
+          <div class="card-bottom-progress">
+            <div class="glass-progress-wrap">
+              <div class="glass-progress-track">
+                <div class="glass-progress-fill" style="width: 20%;"></div>
+              </div>
+              <span class="glass-progress-percent">20%</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==============================================
+             ACTIVITY 2: LISTENING (Icon from Picture 1)
+             ============================================== -->
+        <article class="glass-carousel-card" data-activity-type="listening">
+          <div class="card-top-row">
+            <span class="glass-pill purple-badge badge-skill-listening">Skill</span>
+            <!-- 3D Headphones with sound waves from Picture 1 -->
+            <svg class="card-top-icon activity-card-icon" viewBox="0 0 100 100" title="Listening Activity">
+              <defs>
+                <linearGradient id="act-hp-band" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ffffff"/>
+                  <stop offset="40%" stop-color="#e2e8f0"/>
+                  <stop offset="100%" stop-color="#94a3b8"/>
+                </linearGradient>
+                <linearGradient id="act-hp-cushion" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#8b5cf6"/>
+                  <stop offset="50%" stop-color="#6d28d9"/>
+                  <stop offset="100%" stop-color="#4c1d95"/>
+                </linearGradient>
+                <linearGradient id="act-wave-gold" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#fde047"/>
+                  <stop offset="60%" stop-color="#f59e0b"/>
+                  <stop offset="100%" stop-color="#d97706"/>
+                </linearGradient>
+              </defs>
+              <ellipse cx="50" cy="84" rx="36" ry="8" fill="#4c3d82" opacity="0.22"/>
+              <path d="M 22 55 C 20 25 34 14 50 14 C 66 14 80 25 78 55" stroke="url(#act-hp-band)" stroke-width="8" stroke-linecap="round" fill="none"/>
+              <path d="M 25 50 C 24 28 35 17 50 17 C 65 17 76 28 75 50" stroke="#ffffff" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.9"/>
+              <rect x="34" y="52" width="5" height="15" rx="2.5" fill="#a78bfa"/>
+              <rect x="42" y="42" width="5.5" height="26" rx="2.75" fill="url(#act-wave-gold)"/>
+              <rect x="50" y="34" width="6" height="34" rx="3" fill="url(#act-wave-gold)"/>
+              <rect x="58" y="44" width="5.5" height="24" rx="2.75" fill="url(#act-wave-gold)"/>
+              <rect x="66" y="54" width="5" height="13" rx="2.5" fill="#a78bfa"/>
+              <g transform="translate(13, 44) rotate(-6)">
+                <rect x="0" y="0" width="14" height="29" rx="7" fill="url(#act-hp-band)"/>
+                <rect x="2" y="2" width="4" height="25" rx="2" fill="#ffffff" opacity="0.8"/>
+                <rect x="9" y="3" width="7.5" height="23" rx="3.75" fill="url(#act-hp-cushion)"/>
+              </g>
+              <g transform="translate(73, 43) rotate(6)">
+                <rect x="-2.5" y="3" width="7.5" height="23" rx="3.75" fill="url(#act-hp-cushion)"/>
+                <rect x="0" y="0" width="14" height="29" rx="7" fill="url(#act-hp-band)"/>
+                <rect x="8" y="2" width="4" height="25" rx="2" fill="#ffffff" opacity="0.8"/>
+              </g>
+              <polygon points="26,20 27.5,23.5 31,25 27.5,26.5 26,30 24.5,26.5 21,25 24.5,23.5" fill="#ffffff"/>
+            </svg>
+          </div>
+          <div class="card-main-info">
+            <h3 class="card-title">Task 2</h3>
+            <p class="card-subtitle">Listening • 10 questions</p>
+          </div>
+          <div class="card-bottom-progress">
+            <div class="glass-progress-wrap">
+              <div class="glass-progress-track">
+                <div class="glass-progress-fill" style="width: 0%;"></div>
+              </div>
+              <span class="glass-progress-percent">0%</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==============================================
+             ACTIVITY 3: WRITING
+             (Icon: Vocabulary "Aa" Tile from Picture 1 - per prompt instruction)
+             ============================================== -->
+        <article class="glass-carousel-card" data-activity-type="writing">
+          <div class="card-top-row">
+            <span class="glass-pill purple-badge badge-skill-writing">Skill</span>
+            <!-- Prompt: "For writing icon use vocabulary icon in the first picture." -->
+            <svg class="card-top-icon activity-card-icon" viewBox="0 0 100 100" title="Writing Activity (Vocabulary Icon)">
+              <defs>
+                <linearGradient id="act-tile-face" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#b197ff"/>
+                  <stop offset="45%" stop-color="#8f6cf8"/>
+                  <stop offset="100%" stop-color="#7048f5"/>
+                </linearGradient>
+                <linearGradient id="act-tile-side-l" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#6741dc"/>
+                  <stop offset="100%" stop-color="#4924b8"/>
+                </linearGradient>
+                <linearGradient id="act-tile-side-r" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#552ec7"/>
+                  <stop offset="100%" stop-color="#3b17a1"/>
+                </linearGradient>
+              </defs>
+              <path d="M 16 62 L 50 82 L 84 62 L 50 45 Z" fill="#4c3d82" opacity="0.25"/>
+              <path d="M 14 50 L 50 71 L 50 80 L 14 59 Z" fill="url(#act-tile-side-l)"/>
+              <path d="M 50 71 L 86 50 L 86 59 L 50 80 Z" fill="url(#act-tile-side-r)"/>
+              <path d="M 50 22 C 53 20 57 20 60 22 L 84 39 C 87 41 87 45 84 48 L 60 65 C 57 67 53 67 50 65 L 16 48 C 13 45 13 41 16 39 Z" fill="url(#act-tile-face)"/>
+              <path d="M 18 40 L 50 23 L 82 40" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" fill="none" opacity="0.95"/>
+              <path d="M 50 66 L 83 48" stroke="#d5bfff" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.6"/>
+              <text x="32" y="52" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="28" font-weight="900" fill="#361794" opacity="0.5">A</text>
+              <text x="31" y="50" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="28" font-weight="900" fill="#ffffff">A</text>
+              <text x="56" y="52" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="22" font-weight="900" fill="#361794" opacity="0.5">a</text>
+              <text x="55" y="50" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="22" font-weight="900" fill="#ffffff">a</text>
+              <polygon points="76,19 77.5,22.5 81,24 77.5,25.5 76,29 74.5,25.5 71,24 74.5,22.5" fill="#ffffff"/>
+              <polygon points="84,27 85,29.5 88,31 85,32.5 84,35 83,32.5 80,31 83,29.5" fill="#fbbf24"/>
+            </svg>
+          </div>
+          <div class="card-main-info">
+            <h3 class="card-title">Task 3</h3>
+            <p class="card-subtitle">Writing • 8 questions</p>
+          </div>
+          <div class="card-bottom-progress">
+            <div class="glass-progress-wrap">
+              <div class="glass-progress-track">
+                <div class="glass-progress-fill" style="width: 0%;"></div>
+              </div>
+              <span class="glass-progress-percent">0%</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==============================================
+             ACTIVITY 4: SPEAKING (Icon from Picture 1)
+             ============================================== -->
+        <article class="glass-carousel-card" data-activity-type="speaking">
+          <div class="card-top-row">
+            <span class="glass-pill purple-badge badge-skill-speaking">Skill</span>
+            <!-- 3D Studio Mic + Golden Waves from Picture 1 -->
+            <svg class="card-top-icon activity-card-icon" viewBox="0 0 100 100" title="Speaking Activity">
+              <defs>
+                <linearGradient id="act-mic-head" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ffffff"/>
+                  <stop offset="45%" stop-color="#cbd5e1"/>
+                  <stop offset="100%" stop-color="#94a3b8"/>
+                </linearGradient>
+                <linearGradient id="act-mic-body" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#9d7eff"/>
+                  <stop offset="45%" stop-color="#7c5cfa"/>
+                  <stop offset="100%" stop-color="#5a38db"/>
+                </linearGradient>
+                <linearGradient id="act-mic-metal" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ffffff"/>
+                  <stop offset="50%" stop-color="#e2e8f0"/>
+                  <stop offset="100%" stop-color="#94a3b8"/>
+                </linearGradient>
+              </defs>
+              <ellipse cx="44" cy="85" rx="26" ry="7" fill="#4c3d82" opacity="0.22"/>
+              <ellipse cx="42" cy="81" rx="18" ry="5.5" fill="url(#act-mic-metal)"/>
+              <ellipse cx="42" cy="79" rx="16" ry="4" fill="#f1f5f9"/>
+              <rect x="40" y="60" width="4.5" height="20" rx="2.25" fill="url(#act-mic-metal)"/>
+              <path d="M 27 45 C 27 63 57 63 57 45" stroke="url(#act-mic-metal)" stroke-width="4" stroke-linecap="round" fill="none"/>
+              <circle cx="27" cy="45" r="3" fill="#7c5cfa"/>
+              <circle cx="57" cy="45" r="3" fill="#7c5cfa"/>
+              <rect x="32" y="20" width="20" height="36" rx="10" fill="url(#act-mic-body)"/>
+              <path d="M 32 32 C 32 22 36 20 42 20 C 48 20 52 22 52 32 Z" fill="url(#act-mic-head)"/>
+              <line x1="33" y1="25" x2="51" y2="25" stroke="#94a3b8" stroke-width="1.2"/>
+              <line x1="32.5" y1="29" x2="51.5" y2="29" stroke="#94a3b8" stroke-width="1.2"/>
+              <line x1="32" y1="33" x2="52" y2="33" stroke="#ffffff" stroke-width="1.6"/>
+              <rect x="34" y="22" width="2.2" height="30" rx="1.1" fill="#ffffff" opacity="0.6"/>
+              <path d="M 64 36 C 68 40 68 46 64 50" stroke="#f59e0b" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+              <path d="M 72 31 C 78 37 78 49 72 55" stroke="#f59e0b" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+              <path d="M 80 26 C 88 34 88 52 80 60" stroke="#f59e0b" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+              <polygon points="23,19 24.5,22.5 28,24 24.5,25.5 23,29 21.5,25.5 18,24 21.5,22.5" fill="#fbbf24"/>
+            </svg>
+          </div>
+          <div class="card-main-info">
+            <h3 class="card-title">Task 4</h3>
+            <p class="card-subtitle">Speaking • 6 questions</p>
+          </div>
+          <div class="card-bottom-progress">
+            <div class="glass-progress-wrap">
+              <div class="glass-progress-track">
+                <div class="glass-progress-fill" style="width: 0%;"></div>
+              </div>
+              <span class="glass-progress-percent">0%</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Carousel indicator dots -->
+      <div class="carousel-dots" id="activityDots">
+        <div class="carousel-dot active"></div>
+        <div class="carousel-dot"></div>
+        <div class="carousel-dot"></div>
+        <div class="carousel-dot"></div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Interactive Modal Overlays -->
+  <div class="modal-backdrop" id="appModalBackdrop">
+    <div class="glass-modal-card" id="appModalCard">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close dialog">&times;</button>
+      <div id="modalDynamicBody"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="glass-toast" id="appToast">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    <span id="toastMessage">Success</span>
+  </div>
+
+  <script src="js/audio.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+/* ==========================================================================
+   GLASSMORPHISM & THEME STYLING
+   Color palette & glass transparent aesthetic inspired by Picture 1:
+   - Soft pastel lavender, periwinkle, sky blue, lilac
+   - Multi-layered frosted glass with backdrop blur
+   - High-gloss specular reflections & refractive inner borders
+   - Vibrant purple pill badges & buttons
+   - 3D soft lighting & glow
+   ========================================================================== */
+
+:root {
+  /* Core Pastel Palette (from Picture 1) */
+  --bg-gradient-1: #e9edfd;
+  --bg-gradient-2: #ede6fd;
+  --bg-gradient-3: #e2ecfd;
+  --bg-gradient-4: #f3ecfe;
+  --bg-gradient-5: #dee8fc;
+
+  /* Glass Surface Tokens */
+  --glass-surface-ultra: rgba(255, 255, 255, 0.72);
+  --glass-surface-default: rgba(255, 255, 255, 0.52);
+  --glass-surface-subtle: rgba(255, 255, 255, 0.38);
+  --glass-surface-deep: rgba(238, 241, 255, 0.65);
+  --glass-surface-card: rgba(255, 255, 255, 0.58);
+
+  /* Glass Borders with Specular Highlights */
+  --glass-border-bright: rgba(255, 255, 255, 0.95);
+  --glass-border-default: rgba(255, 255, 255, 0.75);
+  --glass-border-subtle: rgba(255, 255, 255, 0.45);
+  --glass-border-tinted: rgba(180, 195, 245, 0.45);
+
+  /* Glass Shadows & Highlights */
+  --glass-specular-top: inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.95);
+  --glass-specular-bottom: inset 0 -1.5px 2px 0 rgba(145, 160, 230, 0.16);
+  --glass-inner-glow: inset 0 0 16px rgba(255, 255, 255, 0.4);
+  --glass-drop-shadow: 0 10px 30px -4px rgba(110, 125, 195, 0.18), 0 4px 12px rgba(130, 145, 215, 0.1);
+  --glass-drop-shadow-lg: 0 18px 45px -8px rgba(100, 120, 205, 0.22), 0 6px 18px rgba(130, 145, 215, 0.12);
+
+  /* Purple Accent & Badges (from Picture 1 & User Instructions) */
+  --purple-primary: #7555fa;
+  --purple-light: #9472ff;
+  --purple-deep: #5935dd;
+  --purple-gradient: linear-gradient(135deg, #7454fa 0%, #8c68ff 50%, #9e7dff 100%);
+  --purple-glow: 0 6px 20px rgba(118, 85, 250, 0.38);
+  --purple-badge-bg: linear-gradient(135deg, #7655fa 0%, #9371ff 100%);
+  --purple-badge-shadow: 0 4px 14px rgba(118, 85, 250, 0.32), inset 0 1px 1px rgba(255, 255, 255, 0.7);
+
+  /* Gold / Warm Highlights */
+  --gold-primary: #f59e0b;
+  --gold-gradient: linear-gradient(135deg, #fbbf24 0%, #f59e0b 60%, #d97706 100%);
+  --gold-glow: 0 4px 16px rgba(245, 158, 11, 0.35);
+
+  /* Typography Colors */
+  --text-primary: #1e1b4b;
+  --text-secondary: #52537a;
+  --text-muted: #7b7e9f;
+  --text-light: #ffffff;
+
+  /* Radii */
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+  --radius-xl: 30px;
+  --radius-full: 9999px;
+
+  /* Blur Standard */
+  --blur-amount: 20px;
+}
+
+/* Base Glassmorphism utility classes */
+.glass-panel {
+  background: var(--glass-surface-card);
+  backdrop-filter: blur(var(--blur-amount)) saturate(170%);
+  -webkit-backdrop-filter: blur(var(--blur-amount)) saturate(170%);
+  border: 1.5px solid var(--glass-border-bright);
+  box-shadow: var(--glass-specular-top), var(--glass-specular-bottom), var(--glass-drop-shadow);
+  border-radius: var(--radius-lg);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Glass Reflection Highlight Streak on top edge */
+.glass-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.95), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Deep Glass Pill for Badges & Buttons */
+.glass-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-radius: var(--radius-full);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Purple Badge (Requested specifically: "Vocabulary cards with purple badges") */
+.purple-badge {
+  background: var(--purple-badge-bg);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: var(--purple-badge-shadow);
+  text-shadow: 0 1px 2px rgba(45, 20, 110, 0.35);
+}
+
+.purple-badge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, transparent 100%);
+  border-radius: var(--radius-full) var(--radius-full) 0 0;
+  pointer-events: none;
+}
+
+/* White Glass Badge */
+.white-glass-badge {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 3px 10px rgba(100, 115, 170, 0.12), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+}
+
+/* Glass Circular Buttons (Back, Bookmark, Key, Audio) */
+.glass-circle-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.9), 0 4px 14px rgba(110, 125, 200, 0.15);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-primary);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+}
+
+.glass-circle-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 1), 0 8px 20px rgba(110, 125, 200, 0.22);
+}
+
+.glass-circle-btn:active {
+  transform: translateY(0) scale(0.96);
+}
+
+/* Glass Progress Capsule Bar */
+.glass-progress-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.glass-progress-track {
+  flex: 1;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: var(--radius-full);
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 1px 2px rgba(80, 95, 150, 0.12);
+}
+
+.glass-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #7454fa, #9a78ff);
+  border-radius: var(--radius-full);
+  box-shadow: 0 0 10px rgba(118, 85, 250, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.glass-progress-fill::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), transparent);
+  border-radius: var(--radius-full);
+}
+
+.glass-progress-percent {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  min-width: 28px;
+  text-align: right;
+}
+
+/* Ambient glowing orbs in the background */
+.ambient-glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(65px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.65;
+  animation: floatOrb 12s ease-in-out infinite alternate;
+}
+
+@keyframes floatOrb {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(15px, -20px) scale(1.08); }
+  100% { transform: translate(-10px, 15px) scale(0.95); }
+}
+
+.orb-lavender {
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(170, 145, 255, 0.45) 0%, rgba(200, 185, 255, 0.1) 70%, transparent 100%);
+  top: 5%;
+  left: -10%;
+}
+
+.orb-sky {
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(160, 205, 255, 0.45) 0%, rgba(190, 225, 255, 0.1) 70%, transparent 100%);
+  top: 35%;
+  right: -15%;
+  animation-duration: 15s;
+  animation-direction: alternate-reverse;
+}
+
+.orb-violet {
+  width: 290px;
+  height: 290px;
+  background: radial-gradient(circle, rgba(195, 160, 255, 0.38) 0%, rgba(220, 195, 255, 0.1) 70%, transparent 100%);
+  bottom: 10%;
+  left: 5%;
+  animation-duration: 18s;
+}

@@ -1,0 +1,13 @@
+# Operating System
+.DS_Store
+Thumbs.db
+
+# Test screenshots
+screenshot*.png
+scroll_test.js
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
